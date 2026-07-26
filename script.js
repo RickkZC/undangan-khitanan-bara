@@ -44,7 +44,7 @@ function openInvitation() {
             // Trigger animations
             initScrollAnimations();
             initCountdown();
-            loadWishes();
+            // loadWishes(); // Removed guestbook
 
             // Smooth scroll to first section
             setTimeout(() => {
@@ -149,130 +149,7 @@ function initCountdown() {
     setInterval(tick, 1000);
 }
 
-// ============================================
-// GUESTBOOK (Google Sheets Backend)
-// ============================================
-const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbweGoDDjI60WHQz35XW5LcERYapWM-8OuC5RJZWdziN-4OlsSyosPFPmG-18YFIWzowaw/exec';
-const WISH_KEY = 'kenzo_khitan_wishes';
-
-let wishesData = [];
-
-async function fetchGlobalWishes() {
-    try {
-        const res = await fetch(SCRIPT_URL);
-        const data = await res.json();
-        wishesData = data;
-        localStorage.setItem(WISH_KEY, JSON.stringify(wishesData));
-    } catch (e) {
-        console.error('Failed fetching wishes:', e);
-        wishesData = JSON.parse(localStorage.getItem(WISH_KEY)) || [];
-    }
-    renderWishesData();
-}
-
-async function submitWish(e) {
-    e.preventDefault();
-    const btn = document.querySelector('.btn-submit');
-    const oldText = btn.textContent;
-    btn.textContent = 'Mengirim...';
-    btn.disabled = true;
-
-    const name = document.getElementById('wish-name').value.trim();
-    const msg = document.getElementById('wish-message').value.trim();
-    const att = document.getElementById('wish-attendance').value;
-    
-    if (!name || !msg) {
-        btn.textContent = oldText;
-        btn.disabled = false;
-        return;
-    }
-
-    // Optimistic UI update (langsung muncul di layar sendiri)
-    const newWish = { name: name, message: msg, attendance: att, time: new Date().toISOString() };
-    wishesData.unshift(newWish);
-    renderWishesData();
-    document.getElementById('wish-form').reset();
-
-    // Kirim ke Google Sheets secara background
-    try {
-        let formData = new URLSearchParams();
-        formData.append('name', name);
-        formData.append('attendance', att);
-        formData.append('message', msg);
-        
-        await fetch(SCRIPT_URL, {
-            method: 'POST',
-            body: formData,
-            mode: 'no-cors' // Hindari error CORS di browser
-        });
-        
-        // Refresh data dari server 1 detik kemudian untuk sinkronisasi
-        setTimeout(fetchGlobalWishes, 1000); 
-    } catch (error) {
-        console.error("Gagal mengirim ke server:", error);
-    }
-
-    // Feedback Sukses
-    btn.textContent = '✅ Terkirim!';
-    btn.style.background = '#2E7D32';
-    setTimeout(() => { 
-        btn.textContent = 'Kirim Ucapan ✉'; 
-        btn.style.background = ''; 
-        btn.disabled = false;
-    }, 2000);
-}
-
-function renderWishesData() {
-    const list = document.getElementById('wishes-list');
-    document.getElementById('wishes-count-number').textContent = wishesData.length;
-
-    list.querySelectorAll('.wish-card').forEach(c => c.remove());
-
-    const labels = { hadir: 'Hadir', tidak: 'Tidak Hadir', ragu: 'Ragu-ragu' };
-
-    wishesData.forEach(w => {
-        const card = document.createElement('div');
-        card.className = 'wish-card';
-        card.innerHTML = `
-            <div class="wish-header">
-                <div class="wish-avatar">${esc(w.name).charAt(0).toUpperCase()}</div>
-                <div class="wish-meta">
-                    <div class="wish-name-text">${esc(w.name)}</div>
-                    <div class="wish-time">${timeAgo(w.time)}</div>
-                </div>
-                <span class="wish-badge ${w.attendance}">${labels[w.attendance] || ''}</span>
-            </div>
-            <p class="wish-msg">${esc(w.message)}</p>
-        `;
-        list.appendChild(card);
-    });
-}
-
-function loadWishes() { 
-    // Tampilkan data lokal secepat kilat
-    wishesData = JSON.parse(localStorage.getItem(WISH_KEY)) || [];
-    renderWishesData();
-    // Lalu tarik data global terbaru dari Google Sheets
-    fetchGlobalWishes();
-}
-
-function timeAgo(d) {
-    const diff = Date.now() - new Date(d).getTime();
-    const m = Math.floor(diff / 60000);
-    if (m < 1) return 'Baru saja';
-    if (m < 60) return m + ' menit lalu';
-    const h = Math.floor(m / 60);
-    if (h < 24) return h + ' jam lalu';
-    const days = Math.floor(h / 24);
-    if (days < 7) return days + ' hari lalu';
-    return new Date(d).toLocaleDateString('id-ID', { day: 'numeric', month: 'long', year: 'numeric' });
-}
-
-function esc(s) {
-    const d = document.createElement('div');
-    d.textContent = s;
-    return d.innerHTML;
-}
+// Guestbook logic removed
 
 // ============================================
 // MUSIC
