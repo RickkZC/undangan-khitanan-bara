@@ -338,3 +338,11 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 });
 import './style.css';
+
+// Export functions to global scope for module usage
+window.openInvitation = openInvitation;
+window.prevSlide = prevSlide;
+window.nextSlide = nextSlide;
+window.goToSlide = goToSlide;
+window.submitWish = submitWish;
+window.scrollToTop = scrollToTop;
