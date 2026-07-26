@@ -1,118 +1,361 @@
 <!DOCTYPE html>
 <html lang="id">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Tasyakuran Khitan Bara</title>
-    <!-- Google Fonts -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Walimatul Khitan - Muhammad Kenzo Al Barra</title>
+    <meta name="description" content="Undangan Walimatul Khitan Muhammad Kenzo Al Barra. Sabtu, 1 Agustus 2026 di Hutan Kota Srengseng, Jakarta Barat.">
+    <meta name="theme-color" content="#4A1012">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Montserrat:wght@300;400;600&family=Great+Vibes&display=swap" rel="stylesheet">
-  </head>
-  <body>
-    <div id="app">
-      
-      <!-- Elegant Hero Section -->
-      <section class="hero-elegant">
-        <div class="elegant-box">
-          <p class="bismillah">Bismillahirrahmanirrahim</p>
-          <p class="intro-text">Dengan memohon rahmat dan ridho Allah SWT, kami bermaksud menyelenggarakan acara Tasyakuran Khitan putra kami:</p>
-          
-          <h1 class="main-title">Bara</h1>
-          
-          <p class="intro-text">Merupakan suatu kehormatan dan kebahagiaan bagi kami apabila Bapak/Ibu/Saudara/i berkenan hadir untuk memberikan doa restu.</p>
-          
-          <div class="scroll-indicator">
-            <p>Gulir ke bawah untuk detail acara</p>
-            <div class="arrow">↓</div>
-          </div>
-        </div>
-      </section>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600;1,700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400&family=Poppins:wght@300;400;500;600&family=Amiri:ital,wght@0,400;0,700;1,400&family=Great+Vibes&display=swap" rel="stylesheet">
+    <!-- Removed style.css link, it will be imported via script.js for Vite -->
+</head>
+<body>
 
-      <!-- Event Details (Serious) -->
-      <section class="event-details-elegant">
-        <h2 class="section-title-elegant">Waktu & Tempat</h2>
-        
-        <div class="details-container">
-          <div class="detail-card">
-            <h3>Akad / Pelaksanaan</h3>
-            <p class="date">Minggu, 28 Juli 2026</p>
-            <p class="time">08:00 WIB - Selesai</p>
-          </div>
-          
-          <div class="detail-card">
-            <h3>Resepsi / Syukuran</h3>
-            <p class="date">Minggu, 28 Juli 2026</p>
-            <p class="time">10:00 WIB - Selesai</p>
-            <p class="location"><strong>Gedung Serbaguna Megah</strong><br>Jl. Kebahagiaan No. 1, Jakarta</p>
-          </div>
-        </div>
-
-        <div class="countdown-elegant">
-          <div class="time-box">
-            <span id="days">00</span>
-            <p>Hari</p>
-          </div>
-          <div class="time-box">
-            <span id="hours">00</span>
-            <p>Jam</p>
-          </div>
-          <div class="time-box">
-            <span id="minutes">00</span>
-            <p>Menit</p>
-          </div>
-          <div class="time-box">
-            <span id="seconds">00</span>
-            <p>Detik</p>
-          </div>
-        </div>
-      </section>
-
-      <!-- The Twist: Funny Gallery -->
-      <section class="comedy-gallery">
-        <div class="transition-box">
-          <h2>Dan inilah sang jagoan kita...</h2>
-          <p class="warning-text">(Peringatan: Siapkan mental Anda)</p>
-        </div>
-
-        <div class="gallery-grid">
-          <div class="img-wrap">
-            <img src="/images/pic1.jpg" alt="Gallery 1" class="funny-img">
-            <p class="caption">Ekspresi pasrah sebelum eksekusi</p>
-          </div>
-          <div class="img-wrap">
-            <img src="/images/WhatsApp%20Image%202026-07-26%20at%2021.49.29.jpeg" alt="Gallery 2" class="funny-img">
-            <p class="caption">Mencoba tegar walau hati bergetar</p>
-          </div>
-          <div class="img-wrap">
-            <img src="/images/WhatsApp%20Image%202026-07-26%20at%2021.49.30%20(1).jpeg" alt="Gallery 3" class="funny-img">
-            <p class="caption">Udah sunat belum sih?</p>
-          </div>
-          <div class="img-wrap">
-            <img src="/images/WhatsApp%20Image%202026-07-26%20at%2021.49.30%20(2).jpeg" alt="Gallery 4" class="funny-img">
-            <p class="caption">Gaya andalan Bara</p>
-          </div>
-          <div class="img-wrap">
-            <img src="/images/WhatsApp%20Image%202026-07-26%20at%2021.49.30.jpeg" alt="Gallery 5" class="funny-img">
-            <p class="caption">Aura sang jagoan baru</p>
-          </div>
-        </div>
-      </section>
-      
-      <!-- Footer -->
-      <footer class="footer-elegant">
-        <p>Terima kasih atas doa dan restu Bapak/Ibu/Saudara/i.</p>
-        <p class="small-text">Bara kini telah dewasa (sedikit).</p>
-      </footer>
-    </div>
-    
-    <!-- Audio -->
-    <audio id="bg-music" loop>
-      <!-- Relaxing / Elegant classical or islamic instrumental -->
-      <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-2.mp3" type="audio/mpeg">
+    <!-- Background Music -->
+    <audio id="bg-music" loop preload="auto">
+        <source src="assets/audio/musik.mp3" type="audio/mpeg">
     </audio>
 
-    <script type="module" src="/main.js"></script>
-  </body>
+    <!-- Music Toggle -->
+    <button id="music-toggle" class="music-btn" aria-label="Toggle music">
+        <div class="music-bars">
+            <span></span><span></span><span></span><span></span>
+        </div>
+    </button>
+
+    <!-- ===================== SECTION 1: SPLASH ===================== -->
+    <section id="splash" class="section splash-section">
+        <div class="corner-ornament top-left"><img src="assets/images/corner_ornament.png" alt=""></div>
+        <div class="corner-ornament top-right"><img src="assets/images/corner_ornament.png" alt=""></div>
+        <div class="corner-ornament bottom-left"><img src="assets/images/corner_ornament.png" alt=""></div>
+        <div class="corner-ornament bottom-right"><img src="assets/images/corner_ornament.png" alt=""></div>
+        <div class="gold-border-left"></div>
+        <div class="gold-border-right"></div>
+        <div class="splash-content anim-fade-in">
+            <p class="splash-bismillah">بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ</p>
+        </div>
+    </section>
+
+    <!-- ===================== SECTION 2: OPENING ===================== -->
+    <section id="opening" class="section opening-section">
+        <div class="corner-ornament top-left"><img src="assets/images/corner_ornament.png" alt=""></div>
+        <div class="corner-ornament top-right"><img src="assets/images/corner_ornament.png" alt=""></div>
+        <div class="corner-ornament bottom-left"><img src="assets/images/corner_ornament.png" alt=""></div>
+        <div class="corner-ornament bottom-right"><img src="assets/images/corner_ornament.png" alt=""></div>
+        <div class="gold-border-left"></div>
+        <div class="gold-border-right"></div>
+        <div class="opening-content">
+            <p class="opening-text anim-fade-in">Dengan segala kerendahan hati dan rasa syukur,<br>kami mengundang Bapak/Ibu/Saudara/i<br>di acara Walimatul Khitan putra kami</p>
+            <h1 class="opening-name anim-fade-in delay-1">Muhammad Kenzo<br>Al Barra</h1>
+            <div class="opening-divider anim-fade-in delay-2">
+                <span class="gold-line"></span>
+                <span class="gold-diamond">✦</span>
+                <span class="gold-line"></span>
+            </div>
+            
+            <div id="guest-box" class="guest-box anim-fade-in delay-2" style="display:none;">
+                <p class="guest-yth">Kepada Yth Bapak/Ibu/Saudara/i:</p>
+                <h3 id="guest-name" class="guest-name-text"></h3>
+            </div>
+            <button id="btn-open" class="btn-open anim-fade-in delay-3" onclick="openInvitation()">
+                <span>Buka Undangan</span>
+            </button>
+        </div>
+    </section>
+
+    <!-- ===================== SECTION 3: DOOR ANIMATION ===================== -->
+    <section id="door-section" class="section door-section" style="display:none;">
+        <div class="corner-ornament top-left"><img src="assets/images/corner_ornament.png" alt=""></div>
+        <div class="corner-ornament top-right"><img src="assets/images/corner_ornament.png" alt=""></div>
+        <div class="corner-ornament bottom-left"><img src="assets/images/corner_ornament.png" alt=""></div>
+        <div class="corner-ornament bottom-right"><img src="assets/images/corner_ornament.png" alt=""></div>
+        <div class="door-container">
+            <div class="door door-left">
+                <div class="door-panel"></div>
+            </div>
+            <div class="door door-right">
+                <div class="door-panel"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===================== MAIN CONTENT ===================== -->
+    <main id="main-content" style="display:none;">
+
+        <!-- ===== SECTION 4: TITLE ===== -->
+        <section id="title-section" class="section title-section maroon-bg">
+            <div class="gold-border-left"></div>
+            <div class="gold-border-right"></div>
+            <div class="container">
+                <div class="scroll-anim">
+                    <div class="title-photo-wrapper">
+                        <img src="assets/photos/kenzo-1.jpg" alt="Kenzo" class="title-photo">
+                    </div>
+                    <h2 class="title-heading">Walimatul Khitan</h2>
+                    <h1 class="title-name">Muhammad Kenzo<br>Al Barra</h1>
+                    <div class="title-divider">
+                        <span class="gold-line"></span>
+                        <span class="gold-diamond">✦</span>
+                        <span class="gold-line"></span>
+                    </div>
+                    <p class="title-date">Sabtu, 1 Agustus 2026</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== SECTION 5: MUKADIMAH ===== -->
+        <section id="mukadimah" class="section mukadimah-section white-bg">
+            <div class="container">
+                <div class="scroll-anim">
+                    <p class="muk-bismillah">بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ</p>
+                    <div class="muk-divider">
+                        <span class="gold-line dark"></span>
+                        <span class="gold-diamond dark">✦</span>
+                        <span class="gold-line dark"></span>
+                    </div>
+                    <p class="muk-salam">Assalamu'alaikum Warahmatullahi Wabarakatuh</p>
+                    <p class="muk-text">
+                        Dengan memanjatkan puji syukur ke hadirat Allah Subhanahu Wa Ta'ala, 
+                        yang telah melimpahkan rahmat, taufiq, serta hidayah-Nya. 
+                        Shalawat serta salam senantiasa tercurahkan kepada junjungan kita 
+                        Nabi Muhammad Shallallahu 'Alaihi Wasallam.
+                    </p>
+                    <p class="muk-text">
+                        Dengan segala kerendahan hati, kami bermaksud menyelenggarakan syukuran 
+                        Walimatul Khitan putra kami.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== SECTION 6: PROFIL ANAK ===== -->
+        <section id="profil" class="section profil-section maroon-bg">
+            <div class="gold-border-left"></div>
+            <div class="gold-border-right"></div>
+            <div class="container">
+                <div class="scroll-anim">
+                    <div class="profil-circle-wrapper">
+                        <div class="profil-circle-frame">
+                            <img src="assets/photos/kenzo-3.jpg" alt="Kenzo Al Barra">
+                        </div>
+                    </div>
+                    <h2 class="profil-name">MUHAMMAD KENZO<br>AL BARRA</h2>
+                    <div class="profil-divider">
+                        <span class="gold-line"></span>
+                        <span class="gold-diamond">✦</span>
+                        <span class="gold-line"></span>
+                    </div>
+                    <p class="profil-parents-label">Anak kedua kami</p>
+                    <p class="profil-parent">Bapak <strong>Arief Riansyah</strong></p>
+                    <p class="profil-amp">&</p>
+                    <p class="profil-parent">Ibu <strong>Icha Rahmah</strong></p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== SECTION 7: GALERI ===== -->
+        <section id="galeri" class="section galeri-section white-bg">
+            <div class="container">
+                <div class="scroll-anim">
+                    <div class="section-header">
+                        <div class="header-line"></div>
+                        <h2 class="section-title-dark">Sang Pangeran Kecil</h2>
+                        <div class="header-line"></div>
+                    </div>
+                    <div class="gallery-carousel" id="gallery-carousel">
+                        <div class="gallery-track" id="gallery-track">
+                            <div class="gallery-slide active">
+                                <div class="gallery-frame"><img src="assets/photos/kenzo-1.jpg" alt="Kenzo" loading="lazy"></div>
+                            </div>
+                            <div class="gallery-slide">
+                                <div class="gallery-frame"><img src="assets/photos/kenzo-2.jpg" alt="Kenzo" loading="lazy"></div>
+                            </div>
+                            <div class="gallery-slide">
+                                <div class="gallery-frame"><img src="assets/photos/kenzo-3.jpg" alt="Kenzo" loading="lazy"></div>
+                            </div>
+                            <div class="gallery-slide">
+                                <div class="gallery-frame"><img src="assets/photos/kenzo-4.jpg" alt="Kenzo" loading="lazy"></div>
+                            </div>
+                            <div class="gallery-slide">
+                                <div class="gallery-frame"><img src="assets/photos/kenzo-5.jpg" alt="Kenzo" loading="lazy"></div>
+                            </div>
+                        </div>
+                        <button class="gal-btn gal-prev" onclick="prevSlide()">‹</button>
+                        <button class="gal-btn gal-next" onclick="nextSlide()">›</button>
+                        <div class="gal-dots" id="gal-dots">
+                            <span class="gal-dot active" onclick="goToSlide(0)"></span>
+                            <span class="gal-dot" onclick="goToSlide(1)"></span>
+                            <span class="gal-dot" onclick="goToSlide(2)"></span>
+                            <span class="gal-dot" onclick="goToSlide(3)"></span>
+                            <span class="gal-dot" onclick="goToSlide(4)"></span>
+                        </div>
+                    </div>
+                    <h3 class="gallery-name">Muhammad Kenzo Al Barra</h3>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== SECTION 8: DETAIL ACARA ===== -->
+        <section id="acara" class="section acara-section white-bg">
+            <div class="container">
+                <div class="scroll-anim">
+                    <div class="section-header">
+                        <div class="header-line"></div>
+                        <h2 class="section-title-dark">Detail Acara</h2>
+                        <div class="header-line"></div>
+                    </div>
+                    <div class="acara-card">
+                        <h3 class="acara-card-title">Walimatul Khitan</h3>
+                        <div class="acara-card-divider"></div>
+                        <div class="acara-item">
+                            <div class="acara-icon">📅</div>
+                            <div><p class="acara-label">Hari & Tanggal</p><p class="acara-value">Sabtu, 1 Agustus 2026</p></div>
+                        </div>
+                        <div class="acara-item">
+                            <div class="acara-icon">🕐</div>
+                            <div><p class="acara-label">Waktu</p><p class="acara-value">10:00 - 17:00 WIB</p></div>
+                        </div>
+                        <div class="acara-item">
+                            <div class="acara-icon">📍</div>
+                            <div>
+                                <p class="acara-label">Lokasi</p>
+                                <p class="acara-value">Hutan Kota Srengseng</p>
+                                <p class="acara-address">Jl. H. Kelik, RT.8/RW.6, Srengseng, Kec. Kembangan, Kota Jakarta Barat, DKI Jakarta 11630</p>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="countdown-label">Hitung Mundur Menuju Hari Bahagia</p>
+                    <div class="countdown" id="countdown">
+                        <div class="cd-item"><span class="cd-num" id="days">00</span><span class="cd-lbl">Hari</span></div>
+                        <div class="cd-sep">:</div>
+                        <div class="cd-item"><span class="cd-num" id="hours">00</span><span class="cd-lbl">Jam</span></div>
+                        <div class="cd-sep">:</div>
+                        <div class="cd-item"><span class="cd-num" id="minutes">00</span><span class="cd-lbl">Menit</span></div>
+                        <div class="cd-sep">:</div>
+                        <div class="cd-item"><span class="cd-num" id="seconds">00</span><span class="cd-lbl">Detik</span></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== SECTION 9: LOKASI ===== -->
+        <section id="lokasi" class="section lokasi-section white-bg">
+            <div class="container">
+                <div class="scroll-anim">
+                    <div class="section-header">
+                        <div class="header-line"></div>
+                        <h2 class="section-title-dark">Lokasi Acara</h2>
+                        <div class="header-line"></div>
+                    </div>
+                    <div class="map-wrapper">
+                        <iframe src="https://maps.google.com/maps?q=Hutan%20Kota%20Srengseng,%20Jakarta%20Barat&t=&z=15&ie=UTF8&iwloc=&output=embed" width="100%" height="280" style="border:0;border-radius:12px;" allowfullscreen="" loading="lazy"></iframe>
+                    </div>
+                    <a href="https://www.google.com/maps/search/?api=1&query=Hutan+Kota+Srengseng,+Jakarta+Barat" target="_blank" class="btn-maps">
+                        📍 Buka Google Maps
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== SECTION 10: DOA & PENUTUP ===== -->
+        <section id="penutup" class="section penutup-section maroon-bg">
+            <div class="gold-border-left"></div>
+            <div class="gold-border-right"></div>
+            <div class="container">
+                <div class="scroll-anim">
+                    <div class="penutup-photo-wrapper">
+                        <div class="profil-circle-frame small">
+                            <img src="assets/photos/kenzo-2.jpg" alt="Kenzo">
+                        </div>
+                    </div>
+                    <p class="penutup-doa">
+                        "Ya Allah, jadikanlah ia anak yang saleh, 
+                        yang senantiasa taat kepada-Mu, berbakti kepada orang tua, 
+                        serta bermanfaat bagi sesama."
+                    </p>
+                    <div class="profil-divider">
+                        <span class="gold-line"></span>
+                        <span class="gold-diamond">✦</span>
+                        <span class="gold-line"></span>
+                    </div>
+                    <p class="penutup-text">
+                        Merupakan suatu kehormatan dan kebahagiaan bagi kami 
+                        apabila Bapak/Ibu/Saudara/i berkenan hadir 
+                        untuk memberikan doa untuk putra kami.
+                    </p>
+                    <p class="penutup-text">
+                        Atas kehadiran dan doa yang diberikan, 
+                        kami mengucapkan terima kasih.
+                    </p>
+                    <p class="penutup-salam">وَالسَّلَامُ عَلَيْكُمْ وَرَحْمَةُ اللهِ وَبَرَكَاتُهُ</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== SECTION 11: KELUARGA ===== -->
+        <section id="keluarga" class="section keluarga-section white-bg">
+            <div class="container">
+                <div class="scroll-anim">
+                    <p class="kel-label">Kami yang mengundang,</p>
+                    <h2 class="kel-names">Arief Riansyah & Icha Rahmah</h2>
+                    <div class="kel-photo-wrapper">
+                        <div class="kel-photo-frame">
+                            <img src="assets/photos/keluarga.jpg" alt="Keluarga Besar" class="kel-photo">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== SECTION 12: UCAPAN & DOA ===== -->
+        <section id="ucapan" class="section ucapan-section white-bg">
+            <div class="container">
+                <div class="scroll-anim">
+                    <div class="section-header">
+                        <div class="header-line"></div>
+                        <h2 class="section-title-dark">Ucapan & Doa</h2>
+                        <div class="header-line"></div>
+                    </div>
+                    <p class="ucapan-subtitle">Berikan ucapan dan doa terbaik Anda untuk Kenzo</p>
+                    <div class="wish-form-card">
+                        <form id="wish-form" onsubmit="submitWish(event)">
+                            <div class="fg">
+                                <label for="wish-name">Nama</label>
+                                <input type="text" id="wish-name" placeholder="Nama Anda" required>
+                            </div>
+                            <div class="fg">
+                                <label for="wish-message">Ucapan & Doa</label>
+                                <textarea id="wish-message" rows="3" placeholder="Tulis ucapan Anda..." required></textarea>
+                            </div>
+                            <div class="fg">
+                                <label for="wish-attendance">Kehadiran</label>
+                                <select id="wish-attendance">
+                                    <option value="hadir">✅ Insya Allah Hadir</option>
+                                    <option value="tidak">❌ Tidak Bisa Hadir</option>
+                                    <option value="ragu">🤔 Masih Ragu</option>
+                                </select>
+                            </div>
+                            <button type="submit" class="btn-submit">Kirim Ucapan ✉</button>
+                        </form>
+                    </div>
+                    <div class="wishes-list" id="wishes-list">
+                        <div class="wishes-count"><span id="wishes-count-number">0</span> Ucapan</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FOOTER -->
+        <footer class="footer maroon-bg">
+            <p class="footer-text">Made with ❤️ for Kenzo</p>
+            <p class="footer-copy">© 2026 Walimatul Khitan Muhammad Kenzo Al Barra</p>
+        </footer>
+    </main>
+
+    <button id="scroll-top" class="scroll-top-btn" onclick="scrollToTop()">▲</button>
+
+    <script type="module" src="/script.js"></script>
+</body>
 </html>
